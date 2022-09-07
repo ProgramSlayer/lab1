@@ -4,7 +4,8 @@
     {
         public double FindMedianSortedArrays(int[] nums1, int[] nums2)
         {
-            var merged = nums1.Concat(nums2).OrderBy(n => n);
+            // Соединить 2 массива в 1, отсортировать его по возрастанию.
+			var merged = nums1.Concat(nums2).OrderBy(n => n);
             int mergedLength = merged.Count();
             if (mergedLength % 2 == 0)
             {
